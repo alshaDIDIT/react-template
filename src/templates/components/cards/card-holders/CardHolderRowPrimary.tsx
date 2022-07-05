@@ -2,7 +2,7 @@ import React from 'react';
 import Card from "../Card";
 import TallCard from "../TallCard";
 
-const CardHolderRow = () => {
+const CardHolderRowPrimary = () => {
     return (
         <div className="d-flex gap-25">
             <div className="d-flex width-100 gap-25">
@@ -18,4 +18,4 @@ const CardHolderRow = () => {
     );
 };
 
-export default CardHolderRow;
+export default CardHolderRowPrimary;
