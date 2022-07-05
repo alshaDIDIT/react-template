@@ -9,6 +9,8 @@ export interface IVideoScreen {
     logoText?: string;
     logoTextColor?: string;
     logoImgUrl?: string;
+    logoWidth?: string;
+    logoHeight?: string;
     logoImgRight?: boolean;
     logoRight?: boolean,
 }

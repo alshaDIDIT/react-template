@@ -56,12 +56,14 @@ const TitleCard = (props: ICard) => {
                         {/* REF HOLDER */}
                         <div
                             className="position-absolute"
-                            style={{bottom: '35%'}}
+                            style={{bottom: '50%'}}
                             ref={titleCardRef}
                         ></div>
                     </div>
 
-                    <div className="card-text">
+                    <div
+                        className={`${(seen) ? 'on-second-sight on-sight' : ''} + ' card-text`}
+                    >
                         <h3 style={{color: labelColor}}>
                             {label?.toUpperCase()}
                         </h3>

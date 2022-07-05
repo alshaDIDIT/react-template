@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import CardHolderSecondary from "../templates/components/cards/card-holders/CardHolderSecondary";
 import TitleCard from "../templates/components/cards/TitleCard";
-import VideoScreen from "../templates/components/first-sight/VideoScreen";
+import VideoScreen from "../templates/components/screens/VideoScreen";
 
 import '../templates/styles/base.css'
 import BetweenPrimary from "../templates/components/betweeners/BetweenPrimary";
@@ -16,7 +16,8 @@ const Home = () => {
                 label={'Lorem ipsum dolor sit amet, consectetur adipisicing elit architecto at deleniti varits doslando curry!'}
                 videoUrl={'https://assets.mixkit.co/videos/preview/mixkit-woman-spins-a-small-world-globe-21319-large.mp4'}
                 instruction={'scroll down'}
-                logoImgUrl={'https://www.clipartmax.com/png/full/279-2798685_png-logo-maker-online-real-clipart-and-vector-graphics-camera-logo-design.png'}
+                logoImgUrl={'https://cdn-icons-png.flaticon.com/512/7967/7967902.png'}
+                logoWidth={'3.5rem'}
             />
             <div className="
                 d-flex

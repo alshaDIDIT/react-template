@@ -9,7 +9,7 @@ const BetweenPrimary = (props: IBetween) => {
     const {
         title, label,
         buttonText,
-        logoImgUrl
+        logoWidth, logoImgUrl
     } = props;
 
     const {ref: betweenRef, inView: betweenIsVisible} = useInView();
@@ -32,6 +32,7 @@ const BetweenPrimary = (props: IBetween) => {
             >
                 <SteeringAnime
                     logoImgUrl={logoImgUrl}
+                    logoSize={logoWidth}
                 />
             </div>
             <div
@@ -40,9 +41,11 @@ const BetweenPrimary = (props: IBetween) => {
             >
                 <div>
                     <h2
-                        className={(seen) ? 'on-second-sight' : ''}
+                        className={(seen) ? 'on-second-sight on-sight' : ''}
                     >{label?.toUpperCase()}</h2>
-                    <h1>{title}</h1>
+                    <h1
+                        className={(seen) ? 'on-second-sight on-sight' : ''}
+                    >{title}</h1>
 
                     <div ref={betweenRef}></div>
                     <div className={(seen) ? 'on-second-sight' : ''}>

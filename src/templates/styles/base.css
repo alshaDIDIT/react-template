@@ -28,6 +28,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #282c34;
 }
 
 /*
@@ -77,6 +78,9 @@ a {
 }
 .width-50{
     width: 50%;
+}
+.width-40{
+    width: 40%;
 }
 .width-25{
     width: 25%;

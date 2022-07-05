@@ -29,7 +29,7 @@
 
 .cornered-btn:hover .button-text {
     z-index: 999;
-    animation: come-forward .3s linear forwards;
+    animation: come-forward .2s linear forwards;
 }
 
 @keyframes come-forward {

@@ -54,7 +54,7 @@ const TallCard = (props: ICard) => {
                         {/* REF HOLDER */}
                         <div
                             className="position-absolute"
-                            style={{bottom: '25%'}}
+                            style={{bottom: '40%'}}
                             ref={tallCardRef}
                         ></div>
                     </div>

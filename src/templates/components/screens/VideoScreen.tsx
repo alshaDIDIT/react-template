@@ -9,6 +9,7 @@ const VideoScreen = (props: IVideoScreen) => {
         videoUrl,
         instruction, instructionColor,
         logoText, logoTextColor,
+        logoWidth, logoHeight,
         logoImgUrl, logoRight, logoImgRight
     } = props;
 
@@ -26,20 +27,24 @@ const VideoScreen = (props: IVideoScreen) => {
                 id="video-logo"
                 style={(logoRight) ? {right: '0'} : {}}
             >
-                <div className="d-flex">
+                <div className="d-flex justify-content-center align-items-center">
                     {
                         (!logoImgRight) ?
                             <>
                                 <img id='logo-img' src={logoImgUrl}
-                                     style={{marginRight: '1rem'}}
+                                     style={{marginRight: '1.25rem', width: logoWidth, height: logoHeight}}
                                 />
-                                <h3>{logoText} </h3>
+                                <h3
+                                    style={{color: logoTextColor}}
+                                >{logoText} </h3>
                             </>
                             :
                             <>
-                                <h3>{logoText} </h3>
+                                <h3
+                                    style={{color: logoTextColor}}
+                                >{logoText} </h3>
                                 <img id='logo-img' src={logoImgUrl}
-                                     style={{marginLeft: '1rem'}}
+                                     style={{marginRight: '2rem', width: logoWidth}}
                                 />
                             </>
                     }

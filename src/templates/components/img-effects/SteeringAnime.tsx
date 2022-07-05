@@ -3,6 +3,7 @@ import '../../styles/anime.css'
 
 interface IProps {
     logoImgUrl?: string;
+    logoSize?: string;
 }
 
 const SteeringAnime = (props: IProps) => {
@@ -13,6 +14,7 @@ const SteeringAnime = (props: IProps) => {
             <img
                 id="steering-img"
                 src={props.logoImgUrl}
+                style={{width: props.logoSize}}
             />
         </div>
     );
