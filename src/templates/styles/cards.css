@@ -50,8 +50,9 @@
 }
 
 #card h3, #tall-card h3, #title-card h3 {
+    font-family: 'Source Sans Pro', sans-serif;
     color: #8eaad9;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bolder;
     letter-spacing: .25rem;
     text-shadow: .1rem .1rem .1rem rgba(0,0,0,.5);
@@ -103,29 +104,6 @@
     }
     100% {
         opacity: 100%;
-    }
-}
-
-.on-sight {
-    animation: show ease-out .5s forwards;
-}
-
-.on-second-sight {
-    animation: show ease-out 1s forwards;
-}
-
-@keyframes show {
-    0% {
-        opacity: 0%;
-        /*transform: scale(.75);*/
-    }
-    50% {
-        opacity: 50%;
-        /*transform: scale(.87);*/
-    }
-    100% {
-        opacity: 100%;
-        /*transform: scale(1);*/
     }
 }
 

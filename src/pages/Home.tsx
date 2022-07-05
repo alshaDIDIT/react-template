@@ -4,6 +4,7 @@ import TitleCard from "../templates/components/cards/TitleCard";
 import VideoScreen from "../templates/components/first-sight/VideoScreen";
 
 import '../templates/styles/base.css'
+import BetweenPrimary from "../templates/components/betweeners/BetweenPrimary";
 
 
 const Home = () => {
@@ -37,6 +38,12 @@ const Home = () => {
                         label={"Label for title"}
                         title={"Lorem Ipsum dolor sit amet."}
                         backVideo={'https://assets.mixkit.co/videos/preview/mixkit-people-ending-a-business-meeting-4802-large.mp4'}
+                    />
+
+                    <BetweenPrimary
+                        title={'Lorem ipsum dolor sit, adipisicing elit!'}
+                        label={'Just another label'}
+                        logoImgUrl={'https://cdn-icons-png.flaticon.com/512/7967/7967902.png'}
                     />
                 </div>
             </div>

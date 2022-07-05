@@ -1,0 +1,27 @@
+#between-primary {
+    height: 55rem;
+    width: 100%;
+    display: flex;
+    margin-left: -4rem;
+    opacity: 0;
+}
+
+.between-container-50 {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+#between-primary h1 {
+    font-size: 5.5rem;
+    color: #303a49;
+}
+
+#between-primary h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #8eaad9;
+}
