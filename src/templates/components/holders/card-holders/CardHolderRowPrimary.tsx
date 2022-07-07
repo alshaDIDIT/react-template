@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from "../Card";
-import TallCard from "../TallCard";
+import Card from "../../cards/Card";
+import TallCard from "../../cards/TallCard";
 
 const CardHolderRowPrimary = () => {
     return (

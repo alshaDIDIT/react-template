@@ -1,33 +1,34 @@
 #card {
-    height: 40rem;
+    height: 41.5rem;
     width: 100%;
+    padding: 2rem;
 }
 
 #tall-card {
     height: 83rem;
     width: 100%;
+    padding: 2rem;
 }
 
 #title-card {
     height: 55rem;
     width: 100%;
+    padding: 2rem;
 }
 
 #card-img-bg {
+    position: relative;
     opacity: 0;
     width: 100%;
     height: 100%;
+    border-radius: .25rem;
+    background-color: silver;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #card, #tall-card, #title-card {
-    position: relative;
-    border-radius: .25rem;
-
-    background-color: silver;
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

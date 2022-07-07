@@ -3,6 +3,8 @@ import {ICard} from "../../models/ICard";
 import {Link} from "react-router-dom";
 import {useInView} from "react-intersection-observer";
 
+import '../../styles/cards.css'
+
 const TallCard = (props: ICard) => {
     const {
         title, titleColor,

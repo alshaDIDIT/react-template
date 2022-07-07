@@ -1,17 +1,14 @@
 #between-primary {
-    height: 55rem;
+    min-height: 55rem;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     margin-left: -4rem;
     opacity: 0;
 }
 
-.between-container-50 {
-    width: 50%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
+#between-primary-left {
+    position: relative;
 }
 
 #between-primary h1 {
@@ -24,4 +21,14 @@
     font-size: 2rem;
     font-weight: bolder;
     color: #8eaad9;
+}
+
+@media screen and (max-width: 56.25em) { /* 900px / 16px = 56.25em */
+    #between-primary {
+        /*min-height: 100rem;*/
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0;
+    }
 }

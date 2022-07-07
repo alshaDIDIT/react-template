@@ -1,11 +1,12 @@
 import React from 'react';
-import LinkText from "../general/LinkText";
+import LinkText from "../../general/LinkText";
+import '../../../styles/holders.css'
 
 const LinkHolder = () => {
     return (
         <div
             id={'link-holder'}
-            className={"width-40 d-flex justify-content-between"}
+            className={"width-75 d-xs-100 d-flex justify-content-between"}
         >
             <div
                 className={'d-flex flex-column'}

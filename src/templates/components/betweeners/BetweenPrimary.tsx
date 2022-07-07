@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import '../../styles/betweeners.css'
 import {IBetween} from "../../models/IBetween";
 import SteeringAnime from "../img-effects/SteeringAnime";
 import CorneredLinkButton from "../buttons/CorneredLinkButton";
 import {useInView} from "react-intersection-observer";
+
+import '../../styles/betweeners.css'
+import '../../styles/containers.css'
 
 const BetweenPrimary = (props: IBetween) => {
     const {
@@ -27,17 +29,17 @@ const BetweenPrimary = (props: IBetween) => {
             className={(seen) ? 'on-sight' : ''}
         >
             <div
-                id=""
-                className="justify-content-center between-container-50"
+                id="between-primary-left"
+                className="between-container-50 d-xs-100"
             >
                 <SteeringAnime
                     logoImgUrl={logoImgUrl}
-                    logoSize={logoWidth}
+                    logoSize={'50%'}
                 />
             </div>
             <div
                 id="between-primary-right"
-                className="between-container-50"
+                className="between-container-50 d-xs-100"
             >
                 <div>
                     <h2

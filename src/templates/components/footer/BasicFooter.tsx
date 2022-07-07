@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {Link} from "react-router-dom";
 import SocialTabs from "../general/SocialTabs";
-import LinkHolder from "../betweeners/LinkHolder";
+import LinkHolder from "../holders/link-holders/LinkHolder";
 
 
 interface IProps {

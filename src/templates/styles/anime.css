@@ -29,11 +29,15 @@
 
 
 #steering-anime {
-    margin: 100rem 0;
+    /*margin: 100rem 0;*/
 }
 
 #steering-img {
-    width: 40rem;
+    width: 30%;
+    position: absolute;
+
+    left: 25%;
+    bottom: 0;
 }
 
 #between-primary:hover #steering-img {

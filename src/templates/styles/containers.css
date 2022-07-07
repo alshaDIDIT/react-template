@@ -3,11 +3,23 @@
     height: 100vh;
 }
 
-#link-holder {
-    margin-top: 3rem;
-}
-
 .link-container {
     margin-bottom: 5rem;
 }
+.between-container-50 {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 56.25em) { /* 900px / 16px = 56.25em */
+    .d-xs-100 {
+        width: 100%;
+    }
+}
+
+
 
