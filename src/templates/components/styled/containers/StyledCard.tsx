@@ -44,7 +44,7 @@ interface ITransparent {
   height?: string;
 }
 
-export const TranspantGradient = styled.div`
+export const TransparentGradient = styled.div`
   width: 100%;
   height: ${(props: ITransparent) => props.height || '100%'};
   border-radius: .25rem;

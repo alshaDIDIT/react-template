@@ -1,81 +1,69 @@
 import React, {useEffect, useState} from 'react';
-import {ICard} from "../../models/ICard";
+import {
+    CardBackColor,
+    CardContainer,
+    CardTextContainer,
+    TallCardFrame,
+    TransparentGradient
+} from "../styled/containers/StyledCard";
 import {Link} from "react-router-dom";
+import {ICard} from "../../models/ICard";
 import {useInView} from "react-intersection-observer";
-
-import '../../styles/cards.css'
 
 const TallCard = (props: ICard) => {
     const {
         title, titleColor,
         label, labelColor,
-        backColor, backImg, backVideo,
-        linkTo } = props;
+        backColor, backImg,
+        backVideo, linkTo
+    } = props;
 
-    const {ref: tallCardRef, inView: cardIsVisible} = useInView();
-    const [seen, setSeen] = useState<boolean>(cardIsVisible);
+    const {ref: imgRef, inView: imgIsVisible} = useInView();
+
+    const [imgSeen, setImgSeen] = useState<boolean>(imgIsVisible);
 
     useEffect(() => {
-        if (cardIsVisible) {
-            setSeen(true)
+        if (imgIsVisible) {
+            setImgSeen(true)
         }
-    }, [cardIsVisible]);
+    }, [imgIsVisible]);
 
     return (
-        <div
-            id="tall-card"
-        >
-            <Link
-                to={linkTo || '/'}
-                style={{
-                    backgroundColor: backColor
-                }}
-            >
-                <div
-                    id='card-img-bg'
+        <TallCardFrame>
+            <Link to={linkTo || '/'}>
+                <CardBackColor
                     style={{
-                        backgroundImage: 'url(' + backImg + ')'
+                        backgroundColor: backColor
                     }}
-                    className={(seen) ? 'on-sight' : ''}
                 >
-                    {(backVideo != undefined && backVideo?.length > 0) ?
-                        <div id="video-bg">
-                            <video autoPlay muted loop id="title-video">
-                                <source
-                                    src={backVideo}
-                                    type="video/mp4"
-                                />
-                            </video>
-                        </div>
-                        :
-                        <></>
-                    }
-                    <div className="
-                        card-transparency
-                    ">
-                        {/* REF HOLDER */}
-                        <div
-                            className="position-absolute"
-                            style={{bottom: '40%'}}
-                            ref={tallCardRef}
-                        ></div>
-                    </div>
-
-                    <div
-                        className={`${(seen) ? 'on-second-sight' : ''} + ' card-text`}
+                    <CardContainer
+                        style={{
+                            backgroundImage: (imgSeen) ? 'url(' + backImg + ')' : '',
+                            animation: (imgSeen) ? 'show ease-out .5s forwards' : ''
+                        }}
                     >
-                        <h3 style={{color: labelColor}}>
-                            {label?.toUpperCase()}
-                        </h3>
-                        <h1
-                            style={{color: titleColor}}
+                        <TransparentGradient>
+                            {/* REF HOLDER */}
+                            <div
+                                className="position-absolute"
+                                style={{bottom: '50%'}}
+                                ref={imgRef}
+                            ></div>
+                        </TransparentGradient>
+
+                        <CardTextContainer
+                            style={{
+                                animation: (imgSeen) ? 'show-text ease-out .5s forwards' : ''
+                            }}
                         >
-                            {title}
-                        </h1>
-                    </div>
-                </div>
+                            <h2 style={{color: labelColor}}>{label?.toUpperCase()}</h2>
+                            <h1 style={{color: titleColor}}>{title}</h1>
+                        </CardTextContainer>
+
+                    </CardContainer>
+                </CardBackColor>
             </Link>
-        </div>
+        </TallCardFrame>
     );
 };
 
